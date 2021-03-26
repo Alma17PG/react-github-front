@@ -1,15 +1,15 @@
 import Head from 'next/head';
 
-import UserSearch from '../../app/containers/UserSearch';
+import RepositorySearch from '../../app/containers/RepositorySearch';
 
 export default function Users() {
   return (
     <div>
       <Head>
-        <title>Buscar usuarios</title>
+        <title>Buscar repositorios</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <UserSearch />
+      <RepositorySearch />
     </div>
   );
 }
