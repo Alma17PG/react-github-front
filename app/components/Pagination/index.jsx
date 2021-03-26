@@ -2,13 +2,14 @@
 import React, { useMemo, memo } from 'react';
 import PropTypes from 'prop-types';
 
-import './style.sass';
+import './style.module.sass';
 
 const Pagination = ({
   count, page, rowsPerPage,
   onChangePage,
 }) => {
   const paginationLabel = useMemo(() => {
+    if (count === 0) return '0-0 de 0';
     const startPosition = ((page - 1) * rowsPerPage) + 1;
     const endPosition = startPosition + (rowsPerPage - 1);
     const lastPosition = endPosition < count ? endPosition : count;

@@ -1,16 +1,15 @@
 import Head from 'next/head';
 
-import HomeContainer from '../app/containers/Home';
+import UserSearch from '../../app/containers/UserSearch';
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Inicio</title>
+        <title>Buscar usuarios</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <HomeContainer />
+      <UserSearch />
     </div>
   );
 }

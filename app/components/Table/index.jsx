@@ -5,7 +5,7 @@ import get from 'lodash.get';
 
 import Header from './Header';
 
-import './style.sass';
+import './style.module.sass';
 
 const Table = ({
   header, rows, onRowClick, callback,
@@ -16,7 +16,7 @@ const Table = ({
     onRowClick(item);
   };
   return (
-    <div className="root">
+    <div className="root-table">
       <table data-testid="table-container" className="table">
         <tr>
           <td className="highlight"><div /></td>
