@@ -12,6 +12,7 @@ const CardItem = ({
   onClick,
 }) => (
   <div
+    data-testid="card-item"
     className="card card-item"
     role="button"
     tabIndex="0"

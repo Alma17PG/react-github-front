@@ -6,7 +6,7 @@ import './style.sass';
 const CardImage = ({ image }) => (
   <>
     {image && (
-      <div className="card-image">
+      <div data-testid="card-image" className="card-image">
         <figure className="image is-square">
           <img alt="img" src={image} />
         </figure>

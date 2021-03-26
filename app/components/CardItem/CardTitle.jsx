@@ -6,7 +6,7 @@ import './style.sass';
 const CardTitle = ({ title }) => (
   <>
     {title && (
-    <div className="media">
+    <div data-testid="card-title" className="media">
       <div className="media-content">
         <p className="title is-5 has-text-centered">{title}</p>
       </div>

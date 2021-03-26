@@ -6,7 +6,7 @@ import './style.sass';
 const CardDescription = ({ description }) => (
   <>
     {description && (
-      <div className="content">
+      <div data-testid="card-description" className="content">
         {description}
       </div>
     )}
