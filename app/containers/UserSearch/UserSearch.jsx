@@ -84,6 +84,11 @@ const UserSearch = ({ userName, setUsername }) => {
     fetchUsers();
   }, [page]);
 
+  const handleRowClick = (item) => {
+    const { html_url: url } = item;
+    window?.open(url, '_blank');
+  };
+
   return (
     <div className="user-container">
       <div className="search">
@@ -96,7 +101,7 @@ const UserSearch = ({ userName, setUsername }) => {
       </div>
       <div className="table-container">
         {users.length > 0
-          ? (<Table header={header} rows={users} />)
+          ? (<Table header={header} rows={users} onRowClick={handleRowClick} />)
           : (
             <div className="container-empty">
               <img className="img-empty" alt="empty" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/empty_xct9.svg" />
