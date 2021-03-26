@@ -32,14 +32,14 @@ const SearchBar = ({
     >
       <input
         data-testid="input-search"
-        className="input"
+        className="input is-small"
         type="text"
         placeholder={placeholder}
         value={text}
         onChange={handleChange}
       />
       <span className="icon is-small is-left">
-        <FontAwesomeIcon icon={faSearch} />
+        <FontAwesomeIcon icon={faSearch} size="2x" />
       </span>
     </div>
   );
