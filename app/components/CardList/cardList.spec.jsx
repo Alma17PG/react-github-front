@@ -14,7 +14,7 @@ const list = (Array(listSize).fill(null).map(() => ({
   onClick,
 })));
 
-describe.only('<CardList/>', () => {
+describe('<CardList/>', () => {
   test('should render list of cards', () => {
     const { getByTestId, getAllByTestId } = render(<CardList list={list} />);
 

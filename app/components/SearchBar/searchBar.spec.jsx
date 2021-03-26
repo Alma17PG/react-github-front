@@ -10,7 +10,7 @@ afterEach(() => {
   onSearch = jest.fn();
 });
 
-describe.only('<SearchBar/>', () => {
+describe('<SearchBar/>', () => {
   test('should render input searchBar', () => {
     const { getByTestId } = render(<SearchBar placeholder="Buscar usuario" onSearch={onSearch} />);
 
