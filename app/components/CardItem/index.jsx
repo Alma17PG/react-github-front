@@ -1,23 +1,18 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+
+import CardTitle from './CardTitle';
+import CardImage from './CardImage';
+import CardDescription from './CardDescription';
 
 import './style.sass';
 
-const CardItem = ({ image, title }) => (
+const CardItem = ({ image, title, description }) => (
   <div className="card card-item">
-    {image && (
-      <div className="card-image">
-        <figure className="image is-square">
-          <img alt="img" src={image} />
-        </figure>
-      </div>
-    )}
+    <CardImage image={image} />
     <div className="card-content">
-      <div className="media">
-        <div className="media-content">
-          <p className="title is-5 has-text-centered">{title}</p>
-        </div>
-      </div>
+      <CardTitle title={title} />
+      <CardDescription description={description} />
     </div>
   </div>
 );
@@ -25,11 +20,13 @@ const CardItem = ({ image, title }) => (
 CardItem.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
+  description: PropTypes.string,
 };
 
 CardItem.defaultProps = {
   image: '',
   title: '',
+  description: '',
 };
 
-export default CardItem;
+export default memo(CardItem);
