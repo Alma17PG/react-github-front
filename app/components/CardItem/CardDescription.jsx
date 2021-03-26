@@ -1,8 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-import './style.sass';
-
 const CardDescription = ({ description }) => (
   <>
     {description && (
