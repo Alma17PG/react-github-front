@@ -1,0 +1,106 @@
+.root
+  display: grid
+  min-width: 50vw
+  @media (min-width: 480px)
+    max-width: 90%
+    display: inline
+    height: 100%
+@keyframes fadeIn
+  from 
+    opacity: 0
+  to 
+    opacity: 1
+.table
+  animation: fadeIn 1s
+  background: #FFFFFF
+  margin: 1em 0
+  color: #013245
+  min-width: 300px
+  border-radius: .4em
+  border-collapse: collapse
+  & .tr-disabled
+    color: #D4D4D4
+  & tr:first-child
+    & td.highlight
+      display: none
+  @media (min-width: 480px)
+    box-shadow: 0px 0px 36px -29px rgba(0,0,0,0.75)
+    & td.highlight
+      display: contents !important
+      padding: 0 !important
+      width: 4px
+      & div
+        width: 4px
+        height: 100%
+        display: table-cell
+        border-radius: 4px
+        background-color: white
+        transition: all 0.2s ease-in-out
+  & tr:not(:first-child):hover
+    @media (min-width: 480px)
+      box-shadow: 0px 0px 36px -15px rgba(0,0,0,0.75)
+      & .highlight div
+        transform: scaleX(4)
+  & th, td:before
+    color: #013245
+  & th
+    display: none
+    &:first-child
+      border-left: border
+    &:last-child
+      border-right: border
+  & td
+    cursor: default
+    display: block
+    @media (max-width: 480px)
+      border-left: 5px solid
+      border-right: 5px solid
+      border-image-slice: 1
+      border-width: 2.5px
+      border-image-source: linear-gradient(to left, #3F3D56, #9841a5)
+    border-collapse: collapse
+    @media (min-width: 480px)
+      cursor: pointer
+      border-left: 0px
+      border-right: 0px
+    &:first-child
+      display: none
+      @media (min-width: 480px)
+        display: content
+    &:nth-child(2)
+      padding-top: .5em
+      @media (max-width: 480px)
+        border-top: 5px solid
+        border-image-slice: 1
+        border-width: 2.5px
+        border-image-source: linear-gradient(to left, #3F3D56, #9841a5)
+    &:nth-last-of-type(2)
+      padding-bottom: .5em
+      margin-bottom: .5em
+      @media (max-width: 480px)
+        border-bottom: 2.5px solid
+        border-image-slice: 1
+        border-width: 2.5px
+        border-image-source: linear-gradient(to left, #3F3D56, #9841a5)
+    &:last-child
+      display: none
+      @media (min-width: 480px)
+        display: content
+    &::before
+      content: attr(data-th)": "
+      font-weight: bold
+      width: 6.5em
+      display: inline-block
+      @media (min-width: 480px)
+        display: none
+  & th, td
+    border-top: 0px
+    border-bottom: 0px
+    border-collapse: collapse
+    text-align: left
+    padding: .5em 1em
+    @media (min-width: 480px)
+      padding: .5em
+      display: table-cell
+      border-top: border
+      border-bottom: border
