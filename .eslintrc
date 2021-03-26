@@ -19,7 +19,8 @@
   },
   "rules": {
     "linebreak-style":"off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "parserOptions": {
     "ecmaVersion": 2018,
