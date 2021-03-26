@@ -5,7 +5,7 @@ import CardTitle from './CardTitle';
 import CardImage from './CardImage';
 import CardDescription from './CardDescription';
 
-import './style.sass';
+import './style.module.sass';
 
 const CardItem = ({
   image, title, description,

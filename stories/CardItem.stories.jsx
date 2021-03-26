@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 
 import CardItem from '../app/components/CardItem';
 
-import repositories from '../app/assets/images/repositories.svg';
+const repositories = 'https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/Working_oh83.svg';
 
 export const Default = () => {
   const title = text('Title', 'Buscar repositorios');

@@ -1,13 +1,12 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-
-import './style.sass';
 
 const CardImage = ({ image }) => (
   <>
     {image && (
       <div data-testid="card-image" className="card-image">
-        <figure className="image is-square">
+        <figure className="image is-1by1">
           <img alt="img" src={image} />
         </figure>
       </div>
@@ -16,7 +15,7 @@ const CardImage = ({ image }) => (
 );
 
 CardImage.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.any,
 };
 
 CardImage.defaultProps = {
