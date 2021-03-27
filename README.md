@@ -20,3 +20,10 @@ Run this command to execute cypress tests (in progress).
 ```
 npm run cypress
 ```
+
+### :art: Storybook
+Run this command to execute storybook.
+
+```
+npm run storybook
+```
