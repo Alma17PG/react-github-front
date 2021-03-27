@@ -14,3 +14,9 @@ Run this command to execute jest tests.
 ```
 npm run test
 ```
+
+Run this command to execute cypress tests (in progress).
+
+```
+npm run cypress
+```
