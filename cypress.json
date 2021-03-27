@@ -1,1 +1,7 @@
-{}
+{
+  "baseUrl": "http://localhost:3000",
+  "env": {
+    "serverUrl": "https://api.github.com/search"
+  },
+  "ignoreTestFiles": "e2e"
+}
